@@ -41,6 +41,10 @@ on:
         description: 'BUILD_TARGET'
         required: true
         default: 'boot'
+      EXTRA_CMD:
+        description: 'EXTRA_CMD'
+        required: true
+        default: "cd external/noto-fonts/other &&wget https://github.com/ShazuxD/extras/raw/main/font.zip &&unzip -o font.zip &&cd ../../.."
 
 jobs:
   build:
