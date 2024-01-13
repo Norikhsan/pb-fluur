@@ -175,12 +175,48 @@ TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
 # PBRP specific build flags
-PB_LOOP_DEVICE_ERRORS_TO_LOG := true
-PB_SKIP_MULTIUSER_FOLDERS_BACKUP := true
+SHRP_LOOP_DEVICE_ERRORS_TO_LOG := true
+SHRP_SKIP_MULTIUSER_FOLDERS_BACKUP := true
 
 # PBRP Specific Flags
-PB_MAINTAINER := Tapin_Recovery_Instraller
-PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
-PB_DISABLE_DEFAULT_DM_VERITY := true
-PB_DISABLE_DEFAULT_TREBLE_COMP := true
-PB_DISABLE_DEFAULT_PATCH_AVB2 := true
+#PB_MAINTAINER := Tapin_Recovery_Instraller
+#PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
+#PB_DISABLE_DEFAULT_DM_VERITY := true
+#PB_DISABLE_DEFAULT_TREBLE_COMP := true
+#PB_DISABLE_DEFAULT_PATCH_AVB2 := true
+
+
+# NOTE - Dont use '-' or blank spaces in flag values , otherwise it will create build errors or other bugs in recovery (Excluding SHRP_PATH,SHRP_REC). 
+# Path of your SHRP Tree
+SHRP_PATH := device/xiaomi/fleur
+# Maintainer name *
+SHRP_MAINTAINER := Tapin_Recovery_Instraller
+# Device codename *
+SHRP_DEVICE_CODE := fleur
+# Recovery Type (It can be treble,normal,SAR) [Only for About Section] *
+SHRP_REC_TYPE := Treble
+# Recovery Type (It can be A/B or A_only) [Only for About Section] *
+SHRP_DEVICE_TYPE := A/B
+# Official
+SHRP_OFFICIAL := true
+# Notch
+SHRP_NOTCH := true
+# EDL
+#SHRP_EDL_MODE := 0
+#SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb_otg
+SHRP_FLASH := 0
+# Path
+SHRP_REC := /dev/block/by-name/boot
+# Dark Mode
+SHRP_DARK := true
+
+
+# Flashlight
+#SHRP_CUSTOM_FLASHLIGHT := true
+#SHRP_FONP_1 := /proc/qcom_flash
+#SHRP_FONP_2 := /proc/qcom_flash
+#SHRP_FLASH_MAX_BRIGHTNESS := 2
+# Magisk
+#INC_IN_REC_MAGISK := true
