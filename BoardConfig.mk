@@ -173,3 +173,14 @@ TW_INCLUDE_FASTBOOTD := true
 # Log
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+# PBRP specific build flags
+PB_LOOP_DEVICE_ERRORS_TO_LOG := true
+PB_SKIP_MULTIUSER_FOLDERS_BACKUP := true
+
+# PBRP Specific Flags
+PB_MAINTAINER := Tapin_Recovery_Instraller
+PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
+PB_DISABLE_DEFAULT_DM_VERITY := true
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
+PB_DISABLE_DEFAULT_PATCH_AVB2 := true
